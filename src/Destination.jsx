@@ -1,6 +1,6 @@
 const Destination = ({index, name, images, description, distance, travel }) => {
   return ( 
-    <div>
+    <div style={{fontFamily: 'barlow'}}>
       <p>{name}</p>
       <img src={images} alt="" />
       <p>{description}</p>

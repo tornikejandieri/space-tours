@@ -7,7 +7,7 @@ const NavBar = () => {
   const linkStyles = {
     color: 'white',
     marginLeft: '25px',
-    fontFamily: 'Bellefair',
+    fontFamily: 'bellefair',
     textDecoration: 'none',
     fontSize: '27px'
     
