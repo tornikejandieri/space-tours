@@ -20,6 +20,7 @@
 
 html body{
   margin: 0;
+  background-color: #0B0D17;
 }
 .home{
 background-image: url('./assets/home/background-home-desktop.jpg');
@@ -58,10 +59,15 @@ backdrop-filter: blur(30px);
   margin-top: 20px;
 }
 
-.destinations-page{
-  background-image: url('./assets/destination/background-destination-desktop.jpg');
-background-size: cover;
-width: 100%;
-height: 790px;
-color: aliceblue;
+.destination{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+.destination{
+  background-image: url('./assets/destination/background-destination-desktop.jpg');
+  background-size: cover;
+  width: 100%;
+  height: 750px;
+  color: #D0D6F9;
+  }

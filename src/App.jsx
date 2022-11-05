@@ -1,9 +1,9 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import DestinationsPage from "./DestinationsPage";
 import Home from './Home'
 import NavBar from "./NavBar";
 import data from "./data.json"
 import { useState } from "react";
+import Destination from "./Destination";
 
 
 
@@ -16,7 +16,7 @@ const [destination, setDestination] = useState(data)
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/destination" element={<DestinationsPage destination={destination} />} />
+        <Route path='/destination' element={<Destination />} />
       </Routes>
     </div>
     </BrowserRouter>

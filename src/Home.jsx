@@ -9,8 +9,8 @@ const Home = () => {
       <div className="home-text-container" style={{
         width: '300px',
         position: 'absolute',
-        width: '450px',
-        height: '382px',
+        width: '400px',
+        height: '302px',
         left: '165px',
         top: '387px'
       }}>
