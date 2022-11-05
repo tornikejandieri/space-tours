@@ -1,8 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from './Home'
 import NavBar from "./NavBar";
-import data from "./data.json"
-import { useState } from "react";
 import Destination from "./Destination";
 import Crew from "./Crew";
 import Technology from "./Technology";
@@ -10,7 +8,6 @@ import Technology from "./Technology";
 
 
 function App() {
-const [destination, setDestination] = useState(data)
 
   return (
     <BrowserRouter>
