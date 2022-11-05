@@ -1,6 +1,7 @@
-const Destination = ({index, name, images, description, distance, travel }) => {
+const Destination = ({id, name, images, description, distance, travel }) => {
   return ( 
     <div style={{fontFamily: 'barlow'}}>
+      <h3>PICK YOUR DESTINATION</h3>
       <p>{name}</p>
       <img src={images} alt="" />
       <p>{description}</p>
