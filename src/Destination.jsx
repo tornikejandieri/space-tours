@@ -30,7 +30,7 @@ const Destination = () => {
   return ( 
     <div className="destination">
       <article>
-      <div>PICK YOUR DESTINATION</div>
+      <div>01 PICK YOUR DESTINATION</div>
         <div className="image-container">
         <img src='' alt="" />
         </div>
