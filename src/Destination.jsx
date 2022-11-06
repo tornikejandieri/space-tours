@@ -1,57 +1,65 @@
-import { useState } from 'react';
-import {destinations} from './data.json'
+import { useState } from "react"
+import { destinations } from "./data.json"
+import { FcNext } from "react-icons/fc"
+import { FcPrevious } from "react-icons/fc"
 
 const Destination = () => {
   const [index, setIndex] = useState(0)
-  const {name, images, png, description, distance, travel} = destinations[index]
+  const { name, images, description, distance, travel } = destinations[index]
 
-  function checkNum(num){
-    if(num > destinations.length - 1){
+  function checkNum(num) {
+    if (num > destinations.length - 1) {
       return 0
-    } else if(num < 0){
+    } else if (num < 0) {
       return destinations.length - 1
     } else return num
   }
 
-  function nextPlanet(){
+  function nextPlanet() {
     setIndex((index) => {
       let newIndex = index + 1
       return checkNum(newIndex)
     })
   }
 
-  function prevPlanet(){
+  function prevPlanet() {
     setIndex((index) => {
       let newIndex = index - 1
       return checkNum(newIndex)
     })
   }
 
-  return ( 
-    <div className="destination">
-      <article>
-      <div>01 PICK YOUR DESTINATION</div>
-        <div className="image-container">
-        <img src='' alt="" />
+  return (
+    <div className='destination'>
+      <article className='destination-content'>
+        <button onClick={prevPlanet}>
+          <FcPrevious size={40} />
+        </button>
+        <div className='image-container'>
+          <h2>01 PICK YOUR DESTINATION</h2>
+          <img src={images.png} alt='' />
         </div>
-        <div>
-          <h1>{name}</h1>
+        <div className='text-container'>
+          <h1> {name}</h1>
+          <span>{description}</span>
+          <div className='travel-details'>
+            <p>
+              AVRG. DISTANCE <br />
+              {distance}
+            </p>
+            <p>
+              EST. TAVEL TIME <br />
+              {travel}
+            </p>
+          </div>
         </div>
-        <div>
-          <p>{description}</p>
-        </div>
-        <div>
-          <p>AVRG. DISTANCE <br />{distance}</p>
-          <p>EST. TAVEL TIME <br />{travel}</p>
-        </div>
-        <div className="button-container">
-          <button onClick={prevPlanet}>prev</button>
-          <button onClick={nextPlanet}>next</button>
-        </div>
-      </article>
 
+        <button onClick={nextPlanet}>
+          <FcNext size={40} />
+        </button>
+      </article>
     </div>
-   );
+  )
 }
- 
-export default Destination;
+
+export default Destination
