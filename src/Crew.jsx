@@ -20,7 +20,7 @@ const Crew = () => {
       return checkNum(newIndex)
     })
   }
-
+  // this function is idle but it still exists in case you want to use it in future lol
   function prevMember() {
     setIndex((index) => {
       let newIndex = index - 1
@@ -28,28 +28,26 @@ const Crew = () => {
     })
   }
 
-  // useEffect(() => {
-  //   const interval = setInterval(() => {nextMember()}, 3000)
-  //   return () => clearInterval(interval)
-  // }, [])
+  useEffect(() => {
+    const interval = setInterval(() => {
+      nextMember()
+    }, 3000)
+    return () => clearInterval(interval)
+  }, [])
 
   return (
     <div className='crew'>
-      <article>
-        <div>02 MEET THE CREW</div>
+      <article className='crew-content'>
         <div className='role-and-name'>
+          <h2>02 MEET THE CREW</h2>
           <h3>{role}</h3>
           <h1>{name}</h1>
+          <div className='bio'>
+            <p>{bio}</p>
+          </div>
         </div>
-        <div className='bio-container'>
-          <p>{bio}</p>
-        </div>
-        <div className='image-container'>
-          <img src='' alt='' />
-        </div>
-        <div className='button-container'>
-          <button onClick={prevMember}>prev</button>
-          <button onClick={nextMember}>next</button>
+        <div className='crew-image-container'>
+          <img src={images.png} alt='' />
         </div>
       </article>
     </div>
