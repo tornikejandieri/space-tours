@@ -1,6 +1,4 @@
-import { Link } from "react-router-dom"
-
-const NotFound = () => {
+const Loading = () => {
   return (
     <div
       style={{
@@ -11,30 +9,29 @@ const NotFound = () => {
         alignItems: "center",
         flexDirection: "column",
         alignSelf: "center",
-        bottom: "300px",
+        bottom: "150px",
+        left: "80px",
         fontFamily: "barlow",
         marginLeft: "500px",
-        border: "solid 2px #a8323e",
+        border: "solid 3px #cbf5f2",
         padding: "50px",
         borderRadius: "20px",
+        fontSize: "22px",
       }}
     >
-      <p>Error 404</p>
-      <h1>Sorry, the page can't be found...</h1>
-
-      <Link
+      <p
         style={{
-          textDecoration: "none",
-          fontSize: "22px",
-          color: "#fff",
-          fontFamily: "bellefair",
+          fontSize: "29px",
+          paddingLeft: "59px",
+          paddingRight: "59px",
+          paddingTop: "0px",
+          paddingBottom: "0px",
         }}
-        to={"/"}
       >
-        👉 Back to Home Page
-      </Link>
+        Loading...
+      </p>
     </div>
   )
 }
 
-export default NotFound
+export default Loading

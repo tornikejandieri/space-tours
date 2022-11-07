@@ -2,6 +2,7 @@ import { useState } from "react"
 import { destinations } from "./data.json"
 import { FcNext } from "react-icons/fc"
 import { FcPrevious } from "react-icons/fc"
+import StyledLine from "./StyledLine"
 
 const Destination = () => {
   const [index, setIndex] = useState(0)
@@ -40,8 +41,23 @@ const Destination = () => {
           <img src={images.png} alt='' />
         </div>
         <div className='text-container'>
-          <h1> {name}</h1>
-          <span>{description}</span>
+          <p
+            style={{
+              fontFamily: "bellefair",
+              fontSize: "140px",
+              marginBottom: "40px",
+              marginTop: "90px",
+              color: "#fff",
+            }}
+          >
+            {" "}
+            {name}
+          </p>
+
+          <span>
+            {description} <StyledLine />
+          </span>
+
           <div className='travel-details'>
             <p>
               AVRG. DISTANCE <br />
